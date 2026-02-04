@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <title>Jenisha | Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Tailwind Config -->
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            primary: '#2563eb',
+            accent: '#d4af37'
+          },
+          keyframes: {
+            bounceSlow: {
+              '0%, 100%': { transform: 'translateY(0)' },
+              '50%': { transform: 'translateY(-10px)' }
+            },
+            textGradient: {
+              '0%, 100%': { 'background-position': '0% 50%' },
+              '50%': { 'background-position': '100% 50%' }
+            }
+          },
+          animation: {
+            'bounce-slow': 'bounceSlow 3s infinite',
+            'text-gradient': 'textGradient 3s linear infinite'
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Font Awesome for icons -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+
+<body class="bg-white text-gray-900 dark:bg-black dark:text-gray-100 transition-colors duration-500">
+
+<!-- ================= HEADER ================= -->
+<header class="fixed top-0 w-full z-50 bg-white dark:bg-black border-b border-gray-200 dark:border-gray-800 backdrop-blur">
+  <nav class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+    <ul class="hidden md:flex gap-8 font-medium">
+      <li><a href="#hero" class="hover:text-primary dark:hover:text-accent">Home</a></li>
+      <li><a href="#projects" class="hover:text-primary dark:hover:text-accent">Projects</a></li>
+      <li><a href="#footer" class="hover:text-primary dark:hover:text-accent">Contact</a></li>
+    </ul>
+
+    <button id="theme-toggle"
+      class="w-10 h-10 rounded-full bg-gray-200 dark:bg-gray-800 flex items-center justify-center hover:scale-110 transition">
+      🌙
+    </button>
+  </nav>
+</header>
+
+<!-- ================= HERO ================= -->
+<section id="hero"
+  class="min-h-screen flex items-center justify-center px-6 pt-28">
+
+  <div class="max-w-6xl w-full grid md:grid-cols-2 gap-12 items-center">
+
+    <div>
+      <h2 class="text-5xl font-bold mb-4 bg-gradient-to-r from-primary to-accent text-transparent bg-clip-text animate-text-gradient">
+        Jenisha J
+      </h2>
+      <h3 class="text-2xl font-semibold mb-6 text-primary dark:text-accent">
+        Software Engineer @ Bounteous x Accolite
+      </h3>
+
+      <p class="text-gray-600 dark:text-gray-300 mb-8">
+        I design and build scalable, user-centric web applications using modern frontend technologies.
+      </p>
+
+      <div class="flex gap-4 mb-6">
+        <a href="#projects" class="btn-primary">View Projects</a>
+        <a href="#footer" class="btn-outline">Contact Me</a>
+      </div>
+
+      <div class="flex gap-4 mb-10">
+        <a href="https://linkedin.com" target="_blank" class="text-gray-600 dark:text-gray-300 hover:text-accent text-2xl transition">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="https://github.com/J-Jenisha" target="_blank" class="text-gray-600 dark:text-gray-300 hover:text-accent text-2xl transition">
+          <i class="fab fa-github"></i>
+        </a>
+      </div>
+
+      <h4 class="font-semibold mb-3">Tech Stack</h4>
+      <div class="flex flex-wrap gap-2">
+        <span class="chip">HTML</span>
+        <span class="chip">CSS</span>
+        <span class="chip">JavaScript</span>
+        <span class="chip">React</span>
+        <span class="chip">Git</span>
+      </div>
+    </div>
+
+    <div class="text-center">
+      <img src="./Assests/Images/Jeni_Picture.jpg"
+           alt="Jenisha"
+           class="rounded-2xl shadow-xl mx-auto hover:scale-105 transition duration-500 animate-bounce-slow">
+    </div>
+
+  </div>
+</section>
+
+<!-- ================= PROJECTS ================= -->
+<section id="projects" class="py-24 px-6 bg-white dark:bg-black">
+  <div class="max-w-6xl mx-auto">
+
+    <!-- Section Heading -->
+    <div class="text-center mb-20">
+      <h2 class="text-4xl font-bold inline-block relative">
+        My Projects
+        <span class="absolute left-0 -bottom-3 w-full h-1 bg-primary dark:bg-accent rounded-full"></span>
+      </h2>
+      <p class="mt-6 text-gray-600 dark:text-gray-400">
+        Selected works highlighting my technical skills and real-world problem solving.
+      </p>
+    </div>
+
+    <!-- Projects -->
+    <div class="grid md:grid-cols-2 gap-12">
+
+      <div class="project-card group relative bg-white dark:bg-gray-900 rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition transform hover:scale-105 duration-500">
+        <div class="p-6">
+          <h3 class="project-title">Remembrance App</h3>
+          <p class="project-date">Nov 2024 – Dec 2024</p>
+          <p class="project-desc">
+            A cross-platform mobile application designed to help Alzheimer’s patients with memory recall, daily reminders, and routine management.
+          </p>
+          <p class="project-stack">Flutter · Dart · SQLite</p>
+        </div>
+      </div>
+
+      <div class="project-card group relative bg-white dark:bg-gray-900 rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition transform hover:scale-105 duration-500">
+        <div class="p-6">
+          <h3 class="project-title">Home Appliances Service Platform</h3>
+          <p class="project-date">Jul 2024 – Aug 2024</p>
+          <p class="project-desc">
+            A full-stack service platform connecting customers with appliance repair professionals. Shortlisted in a college innovation contest.
+          </p>
+          <p class="project-stack">React · Spring Boot · MySQL</p>
+        </div>
+      </div>
+
+      <div class="project-card group relative bg-white dark:bg-gray-900 rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition transform hover:scale-105 duration-500">
+        <div class="p-6">
+          <h3 class="project-title">Event Management System</h3>
+          <p class="project-date">Nov 2023 – Dec 2023</p>
+          <p class="project-desc">
+            A responsive web application for planning, organizing, and managing events with real-time updates.
+          </p>
+          <p class="project-stack">React · MySQL</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer id="footer" class="bg-white dark:bg-black border-t border-gray-200 dark:border-gray-800">
+  <div class="max-w-6xl mx-auto px-6 py-16">
+
+    <div class="grid md:grid-cols-3 gap-10 mb-10">
+      <div>
+        <h3 class="font-semibold mb-3 text-primary dark:text-accent">Contact</h3>
+        <p>📞 +91 9342783497</p>
+        <p>📧 jenishajesudhas@gmail.com</p>
+      </div>
+
+      <div>
+        <h3 class="font-semibold mb-3 text-primary dark:text-accent">Connect</h3>
+        <p><a href="https://www.linkedin.com/" class="hover:underline">LinkedIn</a></p>
+        <p><a href="https://github.com/J-Jenisha" class="hover:underline">GitHub</a></p>
+      </div>
+
+      <div>
+        <h3 class="font-semibold mb-3 text-primary dark:text-accent">Languages</h3>
+        <p>Tamil (Native)</p>
+        <p>English (Professional)</p>
+      </div>
+    </div>
+
+    <div class="text-center text-sm text-gray-600 dark:text-gray-400">
+      © 2026 Jenisha J · All Rights Reserved.
+    </div>
+  </div>
+</footer>
+
+<!-- Scroll to Top Button -->
+<button onclick="window.scrollTo({top: 0, behavior: 'smooth'})"
+        class="fixed bottom-6 right-6 p-3 rounded-full bg-primary text-white shadow-lg hover:scale-110 transition">
+  ⬆️
+</button>
+
+<!-- ================= THEME TOGGLE ================= -->
+<script>
+  const toggle = document.getElementById('theme-toggle');
+  if (localStorage.getItem('theme') === 'dark') {
+    document.documentElement.classList.add('dark');
+    toggle.textContent = '☀️';
+  }
+
+  toggle.addEventListener('click', () => {
+    document.documentElement.classList.toggle('dark');
+    const isDark = document.documentElement.classList.contains('dark');
+    toggle.textContent = isDark ? '☀️' : '🌙';
+    localStorage.setItem('theme', isDark ? 'dark' : 'light');
+  });
+</script>
+
+<!-- ================= COMPONENT STYLES ================= -->
+<style>
+  .btn-primary {
+    @apply px-8 py-4 rounded-full bg-primary text-white font-semibold hover:opacity-90 shadow-md hover:shadow-lg transition;
+  }
+
+  .btn-outline {
+    @apply px-8 py-4 rounded-full border-2 border-primary text-primary dark:border-accent dark:text-accent hover:bg-primary hover:text-white dark:hover:bg-accent dark:hover:text-black shadow-md transition;
+  }
+
+  .chip {
+    @apply px-5 py-2 rounded-full text-sm bg-gray-200 text-gray-800 dark:bg-gray-800 dark:text-gray-200 hover:bg-gradient-to-r hover:from-primary hover:to-accent hover:text-white transition;
+  }
+
+  .project-title {
+    @apply text-2xl font-bold mb-2 text-primary dark:text-accent relative inline-block;
+  }
+
+  .project-title::after {
+    content: '';
+    @apply block w-12 h-1 mt-2 bg-primary dark:bg-accent rounded-full;
+  }
+
+  .project-date {
+    @apply text-sm text-gray-500 mb-4;
+  }
+
+  .project-desc {
+    @apply text-gray-600 dark:text-gray-300 mb-4 leading-relaxed;
+  }
+
+  .project-stack {
+    @apply text-sm font-semibold text-gray-700 dark:text-gray-400;
+  }
+</style>
+
+</body>
+</html>
